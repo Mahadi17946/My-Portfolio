@@ -1,4 +1,5 @@
 'use client';
+import { CENTER_AT } from './introTiming';
 import { usePathname } from 'next/navigation';
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
@@ -31,7 +32,9 @@ export const Navbar = () => {
 
   // Intro animation shudhu Home-e dhire hoy, onno page-e direct load hole druto
   const [intro] = useState(
-    isHome ? { nav: 1.8, glow: 2.7 } : { nav: 0.1, glow: 0.4 },
+    isHome
+      ? { nav: CENTER_AT / 1000, glow: CENTER_AT / 1000 + 0.9 }
+      : { nav: 0.1, glow: 0.4 },
   );
 
   const itemRefs = useRef({});

@@ -1,13 +1,11 @@
 'use client';
-
+import { CENTER_AT, SPLIT_AT } from './introTiming';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa6';
 
-/* ===== Timeline (ms) ===== */
-const CENTER_AT = 2400;
-const SPLIT_AT = CENTER_AT + 1800;
+
 
 /* ===== Rotating Badge Words ===== */
 const badgeWords = [
@@ -246,7 +244,6 @@ const Banner = () => {
               </div>
             </div>
 
-            
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
@@ -263,16 +260,19 @@ const Banner = () => {
         )}
       </div>
 
+      
       {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: show ? 1 : 0 }}
-        transition={{ duration: 0.8, delay: 1.2 }}
-        className="absolute inset-x-0 bottom-12  flex justify-center"
+        animate={{ opacity: split ? 1 : 0 }}
+        transition={{ duration: 0.8, delay: split ? 1.0 : 0 }}
+        className="pointer-events-none absolute inset-x-0 bottom-12 flex justify-center"
       >
         <a
           href="#about"
-          className="hidden lg:flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-950/20 px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.25em] text-zinc-300 transition hover:border-white hover:text-white"
+          className={`hidden lg:flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-950/20 px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.25em] text-zinc-300 transition hover:border-white hover:text-white ${
+            split ? 'pointer-events-auto' : 'pointer-events-none'
+          }`}
         >
           Scroll
           <span className="animate-bounce text-blue-400">↓</span>
