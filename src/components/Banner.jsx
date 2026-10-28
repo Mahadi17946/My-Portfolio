@@ -142,7 +142,7 @@ const Banner = () => {
           {/* Main Heading */}
           <Item i={0} show={show}>
             <h1 className="text-4xl pt-10 font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Hi, it&apos;s {" "}
+              Hi, it&apos;s{' '}
               <span className="bg-gradient-to-r from-blue-400 via-indigo-300 to-white bg-clip-text text-transparent">
                 Mahadi
               </span>
@@ -278,11 +278,11 @@ const Banner = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: show ? 1 : 0 }}
         transition={{ duration: 0.8, delay: 1.2 }}
-        className="absolute inset-x-0 bottom-12 flex justify-center"
+        className="absolute inset-x-0 bottom-12  flex justify-center"
       >
         <a
           href="#about"
-          className="flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-950/20 px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.25em] text-zinc-300 transition hover:border-white hover:text-white"
+          className="hidden lg:flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-950/20 px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.25em] text-zinc-300 transition hover:border-white hover:text-white"
         >
           Scroll
           <span className="animate-bounce text-blue-400">↓</span>

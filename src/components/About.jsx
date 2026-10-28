@@ -132,7 +132,7 @@ const idRows = [
   { k: 'Role', v: 'Frontend Developer' },
   { k: 'Studying', v: 'CSE, Southeast University' },
   { k: 'Focus', v: 'Modern, responsive web apps' },
-  { k: 'Hackathons', v: '2 completed' },
+  // { k: 'Hackathons', v: '2 completed' },
 ];
 
 const About = () => {
@@ -197,13 +197,13 @@ const About = () => {
                   <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-zinc-500">
                     Developer ID
                   </span>
-                  <span className="flex items-center gap-2 whitespace-nowrap rounded-full border border-white/15 bg-black/50 px-3 py-1 text-[11px] font-medium text-white">
+                  {/* <span className="flex items-center gap-2 whitespace-nowrap rounded-full border border-white/15 bg-black/50 px-3 py-1 text-[11px] font-medium text-white">
                     <span className="relative flex h-2 w-2">
                       <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                       <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
                     </span>
                     Open to work
-                  </span>
+                  </span> */}
                 </div>
 
                 <div className="mt-6">
@@ -367,7 +367,7 @@ const About = () => {
         </div>
 
         {/* ===== Tech marquee ===== */}
-        <Reveal className="mt-12 sm:mt-16">
+        {/* <Reveal className="mt-12 sm:mt-16">
           <div className="overflow-hidden py-4 [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
             <div className="flex w-max animate-[marquee_30s_linear_infinite] gap-4">
               {[...techs, ...techs].map(({ name, Icon, color }, i) => (
@@ -383,7 +383,7 @@ const About = () => {
               ))}
             </div>
           </div>
-        </Reveal>
+        </Reveal> */}
       </div>
 
       {/* ===== Certificate lightbox ===== */}
