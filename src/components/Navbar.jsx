@@ -12,6 +12,9 @@ const links = [
   { label: 'Projects', id: 'projects' },
 ];
 
+// Glow border ghurar duration (second)
+const GLOW_DURATION = 2;
+
 export const Navbar = () => {
   const pathname = usePathname();
   const isHome = pathname === '/';
@@ -33,11 +36,14 @@ export const Navbar = () => {
 
   const itemRefs = useRef({});
 
-  // Prothom load-er por hasLoaded true kore dibe
+  // FIX: animation shesh howar por hasLoaded true hobe (delay + duration)
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setHasLoaded(true);
-    }, intro.glow * 1000);
+    const timer = setTimeout(
+      () => {
+        setHasLoaded(true);
+      },
+      (intro.glow + GLOW_DURATION) * 1000,
+    );
     return () => clearTimeout(timer);
   }, [intro.glow]);
 
@@ -146,15 +152,17 @@ export const Navbar = () => {
                 <stop offset="50%" stopColor="#ffffff" stopOpacity="1" />
                 <stop offset="100%" stopColor="#0066ff" stopOpacity="0.8" />
 
+                {/* hasLoaded true na howa porjonto animation DOM-e thakbe */}
                 {!hasLoaded && (
                   <animateTransform
                     attributeName="gradientTransform"
                     type="rotate"
                     from="0 0.5 0.5"
                     to="360 0.5 0.5"
-                    dur="2s"
+                    dur={`${GLOW_DURATION}s`}
                     begin={`${intro.glow}s`}
                     repeatCount="1"
+                    fill="freeze"
                   />
                 )}
               </linearGradient>

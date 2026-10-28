@@ -246,17 +246,7 @@ const Banner = () => {
               </div>
             </div>
 
-            {/* Floating Top Left Badge: Open to work */}
-            {/* <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -right-4 top-6 flex items-center gap-2 rounded-full border border-blue-400/40 bg-black/70 px-3 py-1.5 text-[11px] font-medium text-white backdrop-blur-md"
-            >
-              <span className="h-2 w-2 rounded-full bg-emerald-400" />
-              Open to work
-            </motion.div> */}
-
-            {/* Floating Bottom Right Badge: Stack */}
+            
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
