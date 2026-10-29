@@ -64,7 +64,7 @@ const Contact = () => {
   };
 
   const inputCls =
-    'w-full rounded-xl border border-white/10 bg-transparent px-4 py-3 text-sm text-white placeholder:text-zinc-600 outline-none transition-colors focus:border-blue-500/60';
+    'w-full rounded-xl focus:bg-white/10 border border-white/10 bg-transparent px-4 py-3 text-sm text-white placeholder:text-zinc-600 outline-none transition-colors focus:border-blue-500/60';
 
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-black px-4 pb-16 pt-28 sm:px-6">

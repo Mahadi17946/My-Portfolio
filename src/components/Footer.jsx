@@ -138,9 +138,9 @@ const Footer = () => {
           <p className="text-xs text-zinc-500">
             © {year} Md Mahadi Hassan. All rights reserved.
           </p>
-          <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-zinc-600">
+          {/* <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-zinc-600">
             Built with Next.js · Tailwind · Framer Motion
-          </p>
+          </p> */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="group flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-xs font-semibold text-zinc-300 transition-all duration-300 hover:border-blue-500/60 hover:text-white"

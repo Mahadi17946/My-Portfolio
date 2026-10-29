@@ -87,7 +87,7 @@ const projects = [
     features: [],
     tech: ['Next.js'],
     image: coffee,
-    live: 'https://caffeine-coffee-git-master-mahadi-17946.vercel.app/',
+    live: 'https://caffeine-coffee.vercel.app/',
     github: 'https://github.com/Mahadi17946/Caffeine-Coffee',
   },
   {

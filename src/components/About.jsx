@@ -347,7 +347,7 @@ const About = () => {
         </div>
 
         {/* ===== Pillars ===== */}
-        <div className="mt-20 grid gap-4 sm:mt-24 sm:grid-cols-2 lg:grid-cols-4">
+        {/* <div className="mt-20 grid gap-4 sm:mt-24 sm:grid-cols-2 lg:grid-cols-4">
           {pillars.map((p, i) => (
             <Reveal key={p.no} delay={0.08 * i}>
               <div className="group relative h-full overflow-hidden rounded-2xl border border-white/10 bg-transparent p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/50">
@@ -364,7 +364,7 @@ const About = () => {
               </div>
             </Reveal>
           ))}
-        </div>
+        </div> */}
 
         {/* ===== Tech marquee ===== */}
         {/* <Reveal className="mt-12 sm:mt-16">
